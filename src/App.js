@@ -1,24 +1,26 @@
 import logo from './logo.svg';
 import './App.css';
+import Header from './components/Header';
+import HelloWorld from './HelloWorld';
+
+const myComponentStyle = {
+  color: 'blue',
+  lineHeight: 3,
+  padding: '1.5rem'
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header></Header>
+      <h2 className='header'>Welcome to React</h2> 
+      <div style={{color: "red", border: '1px solid green'}}>Welcome Here</div>
+      <hr />
+      <input type="text"/>
+      <p style={myComponentStyle}>Another Element</p>
+      <button className='btn'>My Btn</button>
+    </>
+      
   );
 }
 
